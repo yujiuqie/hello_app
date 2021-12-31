@@ -15,4 +15,10 @@ module SessionsHelper
     def logged_in?
         !current_user.nil?
     end
+
+    # 退出当前用户
+    def log_out
+        reset_session
+        @current_user = nil
+    end
 end
